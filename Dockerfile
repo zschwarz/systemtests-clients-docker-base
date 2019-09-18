@@ -8,6 +8,7 @@ ADD build/java_clients/cli-activemq.jar /client_executable
 ADD build/java_clients/cli-artemis-jms.jar /client_executable
 ADD build/java_clients/cli-qpid-jms.jar /client_executable
 ADD build/java_clients/cli-paho-java.jar /client_executable
+ADD stomp-client.py /client_executable
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
 RUN yum install -y nodejs
@@ -17,4 +18,4 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
 RUN yum install -y gcc gcc-c++
 
 RUN npm install cli-rhea -g
-RUN pip install cli-proton-python
+RUN pip install cli-proton-python stomp.py
