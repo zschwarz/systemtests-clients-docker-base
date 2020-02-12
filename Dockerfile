@@ -10,7 +10,7 @@ ADD build/java_clients/cli-qpid-jms.jar /client_executable
 ADD build/java_clients/cli-paho-java.jar /client_executable
 ADD stomp-client.py /client_executable
 
-RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 RUN yum install -y nodejs
 RUN yum install -y python python-devel openssl openssl-devel java-11-openjdk-devel
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
