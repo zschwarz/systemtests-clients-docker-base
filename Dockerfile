@@ -16,6 +16,6 @@ RUN yum install -y python python-devel openssl openssl-devel java-11-openjdk-dev
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
     python get-pip.py
 RUN yum install -y gcc gcc-c++
-
+RUN yum -y update
 RUN npm install cli-rhea -g
 RUN pip install cli-proton-python stomp.py
