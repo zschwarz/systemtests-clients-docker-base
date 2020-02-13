@@ -18,4 +18,4 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && \
 RUN yum install -y gcc gcc-c++
 RUN yum -y update
 RUN npm install cli-rhea -g
-RUN pip install cli-proton-python stomp.py
+RUN pip install cli-proton-python stomp.py==4.1.22
